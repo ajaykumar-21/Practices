@@ -16,31 +16,36 @@
 // const store = createStore(reducerFn);
 // export default store;
 
-import { configureStore, createSlice } from "@reduxjs/toolkit";
-
-const counterSlice = createSlice({
-  name: "counter",
-  initialState: { counter: 0 },
-  reducers: {
-    increment(state, action) {
-      state.counter++;
-    },
-
-    decrement(state, action) {
-      state.counter--;
-    },
-
-    addBy(state, action) {
-      state.counter += action.payload;
-    },
+import { configureStore } from "@reduxjs/toolkit";
+// import { counterSlice } from "../Counter";
+import counterReducer from "../Counter";
+const store = configureStore({
+  reducer: {
+    count: counterReducer,
   },
 });
 
-// console.log(counterSlice.actions)
-
-export const actions = counterSlice.actions;
-const store = configureStore({
-  reducer: counterSlice.reducer,
-});
-
 export default store;
+
+// import { createSlice, configureStore } from "@reduxjs/toolkit";
+
+// const counterSlice = createSlice({
+//   name: "Counter",
+//   initialState: { counter: 0 },
+//   reducers: {
+//     increment(state, action) {
+//       state.counter++;
+//     },
+
+//     decodeURIComponent(state, action) {
+//       state.counter--;
+//     },
+//   },
+// });
+
+// export const action = counterSlice.actions;
+// const store = configureStore({
+//   reducer: createSlice.reducers,
+// });
+
+// export default store;
