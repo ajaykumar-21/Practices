@@ -29,30 +29,30 @@
 // export default App;
 
 import React from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { increment, decrement, addBy } from "./Counter";
-import MyComponent from "./MyComponent";
+// import { useDispatch, useSelector } from "react-redux";
+// import { increment, decrement, addBy } from "./Counter";
+import SearchInput from "./components/todo/SearchInput";
+import TodoList from "./components/todo/TodoList";
 
 function App() {
-  const counter = useSelector((state) => state.count.value);
-  const dispatch = useDispatch();
-
-  console.log(counter);
+  // const counter = useSelector((state) => state.count.value);
+  // const dispatch = useDispatch();
 
   // const increment = () => {
   //   dispatch(increment());
   // };
 
-  const decrementByOne = () => {
-    dispatch(decrement());
-  };
+  // const decrementByOne = () => {
+  //   dispatch(decrement());
+  // };
   return (
     <div>
-      <h1>Counter: {counter}</h1>
+      <SearchInput />
+      <TodoList />
+      {/* <h1>Counter: {counter}</h1>
       <button onClick={() => dispatch(increment())}>Increment</button>
       <button onClick={decrementByOne}>Decrement</button>
-      <button onClick={() => dispatch(addBy(10))}>AddBy</button>
-      <MyComponent />
+      <button onClick={() => dispatch(addBy(10))}>AddBy</button> */}
       {/* <button onClick={addBy}>addBy</button> */}
     </div>
   );
