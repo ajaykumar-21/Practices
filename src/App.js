@@ -33,6 +33,7 @@ import React from "react";
 // import { increment, decrement, addBy } from "./Counter";
 import SearchInput from "./components/todo/SearchInput";
 import TodoList from "./components/todo/TodoList";
+import SearchField from "./components/search/searchField";
 
 function App() {
   // const counter = useSelector((state) => state.count.value);
@@ -47,8 +48,9 @@ function App() {
   // };
   return (
     <div>
-      <SearchInput />
-      <TodoList />
+      <SearchField />
+      {/* <SearchInput />
+      <TodoList /> */}
       {/* <h1>Counter: {counter}</h1>
       <button onClick={() => dispatch(increment())}>Increment</button>
       <button onClick={decrementByOne}>Decrement</button>

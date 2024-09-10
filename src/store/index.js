@@ -20,10 +20,13 @@ import { configureStore } from "@reduxjs/toolkit";
 // import { counterSlice } from "../Counter";
 import counterReducer from "../Counter";
 import todoReducer from "../slices/TodoSlice";
+import searchReducer from "../slices/Search";
+
 const store = configureStore({
   reducer: {
     count: counterReducer,
     todo: todoReducer,
+    search: searchReducer,
   },
 });
 
